@@ -8,7 +8,6 @@ function create(username, password, email, firstname, lastname, phone){
   user.set("phone", phone);
   user.signUp(null, {
     success: function(user){
-      $('#btn-signup').submit();
       var url = "http://m-isabel.github.io/vip/users.html";
       window.location.href=url;
     }, error: function(user, error){
