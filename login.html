@@ -209,6 +209,16 @@
         var password = $('#login-password').val();
         login(user, pass);
       });
+      $('#btn-signup').click(function(e){
+        var user = $('#r-username').val();
+        var password = $('#r-password').val();
+        var email = $('#r-email').val();
+        var firstname = $('#r-fname').val();
+        var lastname = $('#r-lname').val();
+        var phone = $('#r-phone').val();
+        create(user, password, email, firstname, lastname, phone);
+      });
+
     </script>
 					<footer>
 						<ul id="copyright">

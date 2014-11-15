@@ -1,11 +1,14 @@
-function create(username, password, email){
+function create(username, password, email, firstname, lastname, phone){
   var user = new Parse.User();
   user.set("username", username);
   user.set("password", password);
   user.set("email", email);
+  user.set("firstname", firstname);
+  user.set("lastname", lastname);
+  user.set("phone", phone);
   user.signUp(null, {
     success: function(user){
-      $('#create').submit();
+      $('#btn-signup').submit();
     }, error: function(user, error){
       alert("Error: " + error.code + " " + error.message);
     }
@@ -15,7 +18,7 @@ function create(username, password, email){
 function login(username, password){
   Parse.User.logIn(username, password, {
     success: function(user){
-       $('#login').submit();
+       $('#btn-login').submit();
     }, error: function(user, error){
         alert("Error: " + error.code + " " + error.message);
     }
