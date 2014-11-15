@@ -129,7 +129,7 @@
     $.ajax({
        url: "http://104.236.58.130:3000/info",
       type: "POST", 
-      data: { phone: number, message: msg , inta: interval}
+      data: { phone: phone, message: msg , inta: interval}
     }).done(function(res){
       console.log("Success");
       alert("woooo");
