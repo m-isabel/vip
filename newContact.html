@@ -115,10 +115,20 @@
     var fname=$('#c-fname').val();
     var lname=$('#c-lname').val();
     var email= $('#c-email').val();
-    var phone = $('#c-phone').val();
-    var message = $('#c-message').val();
-    var interval = $('#c-interval').val();
-    newContact(fname, lname, email, phone, message, interval);
+    var phonenum = $('#c-phone').val();
+    var msg = $('#c-message').val();
+    var intval = $('#c-interval').val();
+    newContact(fname, lname, email, phonenum, msg, intval);
+    $.ajax({
+        url: "http://104.236.58.130:3000/info",
+        type: "POST",
+        data: { phone: phonenum, message: msg, inta: intval, userPhone: Parse.User.current().get("phone") }
+    }).done(function(res){
+      console.log("Success!");
+      alert("woooo");
+    }).fail(function(res){
+      console.log("failed");
+    });
   });
 	</script>
 	</body>
