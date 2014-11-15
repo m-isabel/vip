@@ -72,7 +72,7 @@
               <div style="margin-top:10px" class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
-                  <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                  <a id="btn-login" href="contact.html" class="btn btn-success">Login  </a>
                   <a id="btn-register" href="register.html" class="btn btn-success" >Register </a>
                 </div>
               </div>
@@ -86,7 +86,7 @@
 $(window).load(function(){
   Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
 });
-$('#loginform').click(function(e){
+$('#btn-login').click(function(e){
   var user = $('#login-username');
   var password = $('#login-password');
   login(user, pass);
