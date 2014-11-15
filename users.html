@@ -92,6 +92,11 @@
             document.write('<td>'+object.get('status')+'<\/td>');
             document.write('<td>'+'<a type="button" class="btn btn-default" id="btn-edit'+key+'" href="updateContact.html">Edit<\/a><\/td>');
             document.write('<\/tr>');
+          }
+        }, error: function(error){
+            alert("Error: "+error.code+" "+error.message);
+        } 
+      });
     </script>
 
 		</table>
