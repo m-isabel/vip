@@ -16,6 +16,25 @@ function create(username, password, email, firstname, lastname, phone){
   });
 };
 
+function update(username, password, email, firstname, lastname, phone){
+  var user = Parse.User.current();
+  user.set("username", username);
+  user.set("password", password);
+  user.set("email", email);
+  user.set("firstname", firstname);
+  user.set("lastname", lastname);
+  user.set("phone", phone);
+  user.save(null, {
+    success: function(user){
+      window.location.href="http://m-isabel.github.io/vip/users.html";
+    }, error: function(user, error){
+        alert("Error: "+ error.code + " " + error.message);
+
+    } });
+};
+
+}
+
 function login(username, password){
   Parse.User.logIn(username, password, {
     success: function(user){
