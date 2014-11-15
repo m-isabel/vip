@@ -99,7 +99,7 @@
             phone.innerHTML = object.get('phone');
 			message.innerHTML = object.get('message');
       interval.innerHTML = object.get('interval');
-            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick=listen() >Not Active<\/button><\/td>';
+            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick=listen(this.id) >Not Active<\/button><\/td>';
             edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+' href="updateContact.html">Edit<\/a><\/td>';
          /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
@@ -121,8 +121,9 @@
 		</table>
 	</div>
   <script>
-	function listen(){
+	function listen(this.id){
     alert("hello!!!");
+    alert("this is id"+this.id);
 		var list = document.getElementById("contactList");
     alert("we're here!!");
     var number = list.rows[0][3];
