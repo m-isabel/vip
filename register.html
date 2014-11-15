@@ -45,6 +45,7 @@
 	</nav>
 	<body>
 	<div class="container">
+    <form id ="register" action="contact.html">
 		<label>
 		First Name:
 		</label>
@@ -75,9 +76,22 @@
 		</label>
 		<input id="r-phone" type="text" class="form-control" name="phone" value="" placeholder="Phone">
 		<br>
-		<div class="form-actions">
 			<button class="btn btn-lg btn-primary btn-block" id="btn-submit">Submit</button>
-		</div>
+    </form>
 	</div>
+  <script>
+  $(window).load(function(){
+    Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ");
+  });
+$('#btn-submit').click(function(e){
+  var fname = $('#r-fname').val();
+  var lname = $('#r-lname').val();
+  var email = $('#r-email').val();
+  var username = $('#r-username').val();
+  var phone = $('#r-phone').val();
+  var password = $('#r-password').val();
+  create(username, password, email, fname, lname, phone);
+});
+  </script>
 	</body>
 </html>
