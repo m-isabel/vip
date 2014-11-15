@@ -99,7 +99,7 @@
             phone.innerHTML = object.get('phone');
 			message.innerHTML = object.get('message');
       interval.innerHTML = object.get('interval');
-            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick="listen('+object.get('phone').value+', '+object.get('message').value+', '+object.get('interval').value+')" >Not Active<\/button><\/td>';
+            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick="listen('+object.get('phone').val()+', '+object.get('message').val()+', '+object.get('interval').val()+')" >Not Active<\/button><\/td>';
             edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+' href="updateContact.html">Edit<\/a><\/td>';
          /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
