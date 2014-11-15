@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>VIP</title>
+
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/justified-nav.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/moment.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<!-- Nav -->
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">VIP</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li class="active"><a href="#">Users <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<body>
+	<div class="container">
+		<label>
+		First Name:
+		</label>
+		<input id="c-fname" type="text" class="form-control" name="fname" value="" placeholder="First Name">
+		<br>
+		<label>
+		Last Name:
+		</label>
+		<input id="c-lname" type="text" class="form-control" name="lname" value="" placeholder="Last Name">
+		<br>
+		<label>
+		Email:
+		</label>
+		<input id="c-email" type="text" class="form-control" name="email" value="" placeholder="Email">
+		<br>
+		<label>
+		Phone:
+		</label>
+		<input id="c-phone" type="text" class="form-control" name="phone" value="" placeholder="Phone">
+		<br>
+		<label>
+		Message:
+		</label>
+		<input id="c-message" type="text" class="form-control" name="message" value="" placeholder="Message">
+		<br>
+		<label>
+		Interval:
+		</label>
+		<input id="c-interval" type="text" class="form-control" name="interval" value="" placeholder="Interval e.g. 1">
+		<br>
+		<div class="radio-inline">
+		  <label>
+			<input type="radio" name="optionsRadios" id="hour" value="option1">
+			Hour
+		  </label>
+		</div>
+		<div class="radio-inline">
+		  <label>
+			<input type="radio" name="optionsRadios" id="day" value="option2">
+			Day
+		  </label>
+		</div>
+		<div class="radio-inline">
+		  <label>
+			<input type="radio" name="optionsRadios" id="week" value="option3">
+			Week
+		  </label>
+		</div>
+		<div class="radio-inline">
+		  <label>
+			<input type="radio" name="optionsRadios" id="month" value="option4">
+			Month
+		  </label>
+		</div>
+		<br><br>
+		<div class="form-actions">
+			<button class="btn btn-lg btn-primary btn-block" id="btn-submit">Submit</button>
+		</div>
+	</div>
+		<script>
+	$(window).load(function(){
+  Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
+});
+	</script>
+	</body>
+</html>
