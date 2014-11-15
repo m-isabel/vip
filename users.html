@@ -122,8 +122,8 @@
 	</div>
   <script>
 	function listen(phone, message, interval){
-    alert("hello!!!");
-    alert("we're here!!");
+    //alert("hello!!!");
+    //alert("we're here!!");
     var number = phone;
     var msg = message;
     var userPhone = Parse.User.current().get("phone");
@@ -133,9 +133,10 @@
       data: { phone: phone, message: msg , inta: interval, userphone: userPhone}
     }).done(function(res){
       console.log("Success");
-      alert("woooo");
+      //alert("woooo");
     }).fail(function(res){
-      alert("awwwww");
+      //alert("awwwww");
+	  console.log("fail");
     });
 		
   };
