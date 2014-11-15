@@ -39,7 +39,8 @@ function newContact(fname, lname, email, phone, message, interval){
   contact.set("belongs_to", Parse.User.current());
   contact.save(null,{
     success: function(contact){
-     alert("the babies ate the ice cube sandwiches");     
+     var url = "http://m-isabel.github.io/vip/users.html";
+     window.location.href=url;     
   }, error: function(contact, error){
      alert("Failed to add new contact! "+error.message);         
   }
