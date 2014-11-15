@@ -54,8 +54,9 @@
 				<input type="text" class="form-control" id="contactSearch" placeholder="Contact">
 			  </div>
 			  <button type="submit" class="btn btn-default" id="btn-search">Search</button>
-			  <button type="submit" class="btn btn-default" id="btn-new-contact">New Contact</button>
-			</form>
+			  		<a type="button" class="btn btn-default" id="btn-new-contact" href="newContact.html">New Contact</a>
+	</form>
+
 		<br>
 		<br>
 		<table class ="table">
@@ -81,10 +82,6 @@
 		<script>
 	$(window).load(function(){
   Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
-});
-$('#btn-new-contact').click(function(e){
-    var url = "http://m-isabel.github.io/vip/newContact.html";
-    window.location.href=url;
 });
 	</script>
 	</body>
