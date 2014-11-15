@@ -110,6 +110,15 @@
 	$(window).load(function(){
   Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
 });
+  $('#btn-submit').click(function(e){
+    var fname=$('#c-fname').val();
+    var lname=$('#c-lname').val();
+    var email= $('#c-email').val();
+    var phone = $('#c-phone').val();
+    var message = $('#c-message').val();
+    var interval = $('#c-interval').val();
+    newContact(fname, lname, email, phone, message, interval);
+  });
 	</script>
 	</body>
 </html>

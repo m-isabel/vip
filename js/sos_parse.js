@@ -27,6 +27,25 @@ function login(username, password){
     });
 };
 
+function newContact(fname, lname, email, phone, message, interval){
+  var Contact = Parse.Object.extend("Contact");
+  var contact = new Contact();
+  contact.set("firstname", fname);
+  contact.set("lastname", lname);
+  contact.set("phone", phone);
+  contact.set("email", email);
+  contact.set("message", message);
+  contact.set("interval", interval);
+  contact.set("belongs_to", Parse.User.current());
+  contact.save(null,{
+    success: function(contact){
+     alert("the babies ate the ice cube sandwiches");     
+  }, error: function(contact, error){
+     alert("Failed to add new contact! "+error.message);         
+  }
+});
+};
+
 function loginManager(func, callback){
   setTimeout(function(){
     func();
