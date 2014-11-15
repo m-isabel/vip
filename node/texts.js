@@ -12,12 +12,13 @@ client.sendSms({
     console.log(message.sid);
     console.log('Message sent on:');
     console.log(message.dateCreated);
+    callback();
   } else {
     console.log('Oops! There was an error.');
   }
 });
   },
-  check_messages: function(){
+  check_messages: function(callback){
     client.messages('SM5f636e67fb029a53b9eaf02b5441fa4a').get(function(err, message, callback) { 
         console.log(message.body);
         callback();
