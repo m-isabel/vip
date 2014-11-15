@@ -126,10 +126,11 @@
     alert("we're here!!");
     var number = phone;
     var msg = message;
+    var userPhone = Parse.User.current().get("phone");
     $.ajax({
        url: "http://104.236.58.130:3000/info",
       type: "POST", 
-      data: { phone: phone, message: msg , inta: interval}
+      data: { phone: phone, message: msg , inta: interval, userphone: userPhone}
     }).done(function(res){
       console.log("Success");
       alert("woooo");
