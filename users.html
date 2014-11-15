@@ -116,10 +116,14 @@
         } 
       });
 	  
+    </script>
+
+		</table>
+	</div>
+  <script>
 	$('#btn-status1').click(function(e){
 		var list = document.getElementById("contactList");
-    var row_index = $(this).parent().index('tr');
-    alert(row_index.val());
+    alert("we're here!!");
     var number = list.rows[0][3];
     var msg = list.rows[0][4];
     var interval = list.rows[0][5];
@@ -136,9 +140,7 @@
     });
 		
   });
-    </script>
 
-		</table>
-	</div>
+  </script>
 	</body>
 </html>
