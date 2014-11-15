@@ -19,7 +19,10 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/moment.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/parse-1.2.19.js"></script>
+    <script src="js/sos_parse.js"></script>
 	</head>
+  <body>
 	<!-- Nav -->
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
@@ -66,14 +69,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                         <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
                                     </div>
-                            <div class="input-group">
-                                      <div class="checkbox">
-                                        <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                        </label>
-                                      </div>
-                                    </div>
-                                <div style="margin-top:10px" class="form-group">
+                         <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
                                     <div class="col-sm-12 controls">
                                       <a id="btn-login" href="#" class="btn btn-success">Login  </a>
@@ -85,6 +81,16 @@
                     </div>  
 			</div>
     </div>
-	<body>
+    <script>
+
+$(window).load(function(){
+  Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
+});
+$('#loginform').click(function(e){
+  var user = $('login-username');
+  var password = $('login-password');
+  login(user, pass);
+});
+    </script>
 	</body>
 </html>
