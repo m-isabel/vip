@@ -1,0 +1,12 @@
+{
+  "name": "vip",
+  "version": "1.0.0",
+  "description": "a way to impress people with your kindness",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.9.8",
+    "body-parser": "*",
+    "twilio": "*"
+  },
+  "author": "Isabel Lee Li, Vipul Nataraj"
+}
