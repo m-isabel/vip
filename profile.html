@@ -93,11 +93,24 @@
 		<script>
 	$(window).load(function(){
   Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ");
-var user = Parse.User.current();
-alert(user.get("username"));
+	var user = Parse.User.current();
 	$('#p-username').val(user.get("username"));
-
+	$('#p-fname').val(user.get("firstname"));
+	$('#p-lname').val(user.get("lastname"));
+	$('#p-password').val("**************");
+	$('#p-email').val(user.get("email"));
+	$('#p-phone').val(user.get("phone"));
 });
+
+  $('#btn-update').click(function(e){
+    var fname=$('#p-fname').val();
+    var lname=$('#p-lname').val();
+    var email= $('#p-email').val();
+    var phone = $('#p-phone').val();
+    var password = $('#c-password').val();
+    var username = $('#c-username').val();
+    update(username, password, email, fname, lname, phone);
+  });
 		</script>
 	</body>
 </html>
