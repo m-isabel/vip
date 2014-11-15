@@ -59,7 +59,7 @@
 
 		<br>
 		<br>
-		<table class ="table">
+		<table class ="table" id="contactList">
 		<tr>
 			<td><b>First Name</b></td>
 			<td><b>Last Name</b></td>
@@ -83,9 +83,23 @@
       query = query.equalTo('belongs_to', Parse.User.current());
       query.find({
         success: function(results){
+          var table = document.getElementById("contactList");
           for(var key in results){
+            var row = table.insertrow(key);
+            var firstname = row.insertcell(0);
+            var lastname = row.insertcell(1);
+            var email = row.insertcell(2);
+            var phone = row.insertcell(3);
+            var status = row.insertcell(4);
+            var edit = row.insertcell(5);
             object = results[key];
-            document.write('<tr> <td>');
+            firstname.innerHTML=object.get('firstname');
+            lastname.innerHTML = object.get('lastname');
+            email.innerHTML = object.get('email');
+            phone.innerHTML = object.get('phone');
+            status.innerHTML = object.get('status');
+            edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+'" href="updateContact.html">Edit<\/a><\/td>';
+         /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
             document.write('<td>'+object.get('lastname')+'<\/td>');
             document.write('<td>'+object.get('email')+'<\/td>');
@@ -93,6 +107,7 @@
             document.write('<td>'+object.get('status')+'<\/td>');
             document.write('<td>'+'<a type="button" class="btn btn-default" id="btn-edit'+key+'" href="updateContact.html">Edit<\/a><\/td>');
             document.write('<\/tr>');
+            */
           }
         }, error: function(error){
             alert("Error: "+error.code+" "+error.message);
