@@ -53,31 +53,29 @@
 				<label for="contactSearch" class="sr-only">Contact</label>
 				<input type="text" class="form-control" id="contactSearch" placeholder="Contact">
 			  </div>
-			  <button type="submit" class="btn btn-default">Search</button>
+			  <button type="submit" class="btn btn-default" id="btn-search">Search</button>
+			  <button type="submit" class="btn btn-default" id="btn-new-contact">New Contact</button>
 			</form>
 		<br>
 		<br>
 		<table class ="table">
 		<tr>
-			<td><b>First Name:</b></td>
-			<td id="c-fname"></td>
+			<td><b>First Name</b></td>
+			<td><b>Last Name</b></td>
+			<td><b>Email</b></td>
+			<td><b>Phone</b></td>
+			<td><b>Status</b></td>
+			<td><b>Edit</b></td>
 		</tr>
 		<tr>
-			<td><b>Last Name:</b></td>
+			<td id="c-fname">Mom</td>
 			<td id="c-lname"></td>
+			<td id="c-email">mom@purdue.edu</td>
+			<td id="c-phone">111-111-1111</td>
+			<td id="c-status">Active</td>
+			<td id="c-edit"><button type="submit" class="btn btn-default" id="btn-edit">Edit</button></td>
 		</tr>
-		<tr>
-			<td><b>Email:</b></td>
-			<td id="c-email"></td>
-		</tr>
-		<tr>
-			<td><b>Phone:</b></td>
-			<td id="c-phone"></td>
-		</tr>
-		<tr>
-			<td><b>Status:</b></td>
-			<td id="c-status"></td>
-		</tr>
+
 		</table>
 	</div>
 	</body>
