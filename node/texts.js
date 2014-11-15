@@ -24,5 +24,14 @@ client.sendSms({
         callback();
     });
 
+  },
+  make_call: function(number){
+    client.makeCall({
+          to:number, 
+              from: '4089400664', 
+                  url: "http://twimlbin.com/4a36c767",
+    }, function(err, responseData) {
+      console.log(responseData);
+    }
   }
  }
