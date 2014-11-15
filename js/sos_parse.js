@@ -36,6 +36,7 @@ function newContact(fname, lname, email, phone, message, interval){
   contact.set("email", email);
   contact.set("message", message);
   contact.set("interval", interval);
+  contact.set("status", 'Active');
   contact.set("belongs_to", Parse.User.current());
   contact.save(null,{
     success: function(contact){

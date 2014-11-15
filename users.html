@@ -76,6 +76,23 @@
 			<td id="c-status">Active</td>
 			<td id="c-edit"><a type="button" class="btn btn-default" id="btn-edit" href="updateContact.html">Edit</a></td>
 		</tr>
+    <script>
+      var Contact = new(Parse.Object.extend("Contact"));
+      var query = new Parse.Query("Contact");
+      query = query.equalTo('belongs_to', Parse.User.current());
+      query.find({
+        success: function(results){
+          for(var key in results){
+            object = results[key];
+            document.write('<tr> <td>');
+            document.write(object.get('firstname')+'<\/td>');
+            document.write('<td>'+object.get('lastname')+'<\/td>');
+            document.write('<td>'+object.get('email')+'<\/td>');
+            document.write('<td>'+object.get('phone')+'<\/td>');
+            document.write('<td>'+object.get('status')+'<\/td>');
+            document.write('<td>'+'<a type="button" class="btn btn-default" id="btn-edit'+key+'" href="updateContact.html">Edit<\/a><\/td>');
+            document.write('<\/tr>');
+    </script>
 
 		</table>
 	</div>
