@@ -33,8 +33,6 @@ function update(username, password, email, firstname, lastname, phone){
     } });
 };
 
-}
-
 function login(username, password){
   Parse.User.logIn(username, password, {
     success: function(user){

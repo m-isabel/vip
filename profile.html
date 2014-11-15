@@ -98,7 +98,7 @@
 	$('#p-username').val(user.get("username"));
 	$('#p-fname').val(user.get("firstname"));
 	$('#p-lname').val(user.get("lastname"));
-	$('#p-password').val("**************");
+	$('#p-password').val(user.get("password"));
 	$('#p-email').val(user.get("email"));
 	$('#p-phone').val(user.get("phone"));
 });
@@ -108,8 +108,8 @@
     var lname=$('#p-lname').val();
     var email= $('#p-email').val();
     var phone = $('#p-phone').val();
-    var password = $('#c-password').val();
-    var username = $('#c-username').val();
+    var password = $('#p-password').val();
+    var username = $('#p-username').val();
     update(username, password, email, fname, lname, phone);
   });
 		</script>
