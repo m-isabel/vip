@@ -16,7 +16,7 @@
 		<link href="css/justified-nav.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
 
-		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/moment.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
@@ -49,26 +49,51 @@
 	<div class="container">
 <div id="contact" class="contact_page">
 	<div class="container">
-		<div class="col-md-4">
+	<div class="featurette" id="about">
+		<h2 class="featurette-heading">Profile
+			<span class="text-muted">Current User</span>
+		</h2>
+		<label>
+		First Name:
+		</label>
+		<input id="p-fname" type="text" class="form-control" name="fname" value="" placeholder="First Name">
+		<br>
+		<label>
+		Last Name:
+		</label>
+		<input id="p-lname" type="text" class="form-control" name="lname" value="" placeholder="Last Name">
+		<br>
+		<label>
+		Username:
+		</label>
+		<input id="p-username" type="text" class="form-control" name="username" value="" placeholder="Username">
+		<br>
+		<label>
+		Password:
+		</label>
+		<input id="p-password" type="password" class="form-control" name="password" value="" placeholder="Password">
+		<br>
+		<label>
+		Email:
+		</label>
+		<input id="p-email" type="text" class="form-control" name="email" value="" placeholder="Email">
+		<br>
+		<label>
+		Phone:
+		</label>
+		<input id="p-phone" type="text" class="form-control" name="phone" value="" placeholder="Phone">
+		<br>
+		<div class="form-actions">
+			<button class="btn btn-lg btn-primary btn-block" id="btn-update">Update</button>
 		</div>
-		<div class="col-md-4">
-			<form enctype="application/x-www-form-urlencoded" class="form-horizontal" action="/modules/contact/contactCreateTicketProc.php" method="POST"><div class="padded">
-				<h2 class="form-signin-heading">Users</h2>
-				<label for="text" class="control-label required">Username or Email</label>
-				<input id="contact-username" type="text" class="form-control" name="username" value="" placeholder="username or email"> 
-				
-				<div class="control-group"><label for="text" class="control-label required">Message</label>
-					<div class="controls">
-						<textarea name="text" id="text" rows="6" class="form-control" cols="80"></textarea>
-					</div>
-				</div>
-				<br>
-				<div class="form-actions">
-					<button class="btn btn-lg btn-primary btn-block" id="sendButton">Send</button>
-				</div>
-			</form>
-		</div>
-		</div>    
+		<br>
 	</div>
+		
+	</div>
+		<script>
+	$(window).load(function(){
+  Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ"); 
+});
+	</script>
 	</body>
 </html>
