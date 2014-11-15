@@ -16,7 +16,7 @@
 		<link href="css/justified-nav.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">
 
-		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/moment.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="js/parse-1.2.19.js"></script>
@@ -78,7 +78,7 @@
 		</label>
 		<input id="r-phone" type="text" class="form-control" name="phone" value="" placeholder="Phone">
 		<br>
-			<button class="btn btn-lg btn-primary btn-block" id="btn-submit">Submit</button>
+			<a href="#" class="btn btn-lg btn-primary btn-block" id="btn-submit">Submit</a>
     </form>
 	</div>
   <script>
@@ -93,6 +93,7 @@ $('#btn-submit').click(function(e){
   var phone = $('#r-phone').val();
   var password = $('#r-password').val();
   create(username, password, email, fname, lname, phone);
+  alert("stuff.exe");
 });
   </script>
 	</body>

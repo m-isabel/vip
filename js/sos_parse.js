@@ -8,7 +8,7 @@ function create(username, password, email, firstname, lastname, phone){
   user.set("phone", phone);
   user.signUp(null, {
     success: function(user){
-      $('#btn-signup').submit();
+     $('#btn-signup').submit(); 
     }, error: function(user, error){
       alert("Error: " + error.code + " " + error.message);
     }
@@ -18,7 +18,8 @@ function create(username, password, email, firstname, lastname, phone){
 function login(username, password){
   Parse.User.logIn(username, password, {
     success: function(user){
-       $('#btn-login').submit();
+      var url = "http://m-isabel.github.io/vip/users.html";
+      window.location.href=url;
     }, error: function(user, error){
         alert("Error: " + error.code + " " + error.message);
     }
