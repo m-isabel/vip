@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Home</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Login -->
+			<div class="wrapper style4">
+				<article id="top" class="container 55%">
+					<header>
+						<h2>Login</h2>
+					</header>
+				<div class="container">    
+					<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+						<div class="panel panel-info" >
+								<div class="panel-heading">
+									<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+								</div>     
+
+								<div style="padding-top:30px" class="panel-body" >
+
+									<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+										
+									<form id="loginform" class="form-horizontal" role="form">
+												
+										<div style="margin-bottom: 25px" class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+													<input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">                                        
+												</div>
+											
+										<div style="margin-bottom: 25px" class="input-group">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+													<input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+										</div>
+												
+
+											
+										<div class="input-group">
+												  <div class="checkbox">
+													<label>
+													  <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+													</label>
+												  </div>
+												</div>
+
+
+											<div style="margin-top:10px" class="form-group">
+												<!-- Button -->
+												<div class="col-sm-12 controls">
+												  <a id="btn-login" href="#" class="button big scrolly">Login  </a>
+												</div>
+											</div>
+
+
+											<div class="form-group">
+												<div class="col-md-12 control">
+													<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+														Don't have an account! 
+													<a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+														Sign Up Here
+													</a>
+													</div>
+												</div>
+											</div>    
+										</form>     
+
+
+
+									</div>                     
+								</div>  
+					</div>
+					<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<div class="panel-title">Sign Up</div>
+										<div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+									</div>  
+									<div class="panel-body" >
+										<form id="signupform" class="form-horizontal" role="form">
+											
+											<div id="signupalert" style="display:none" class="alert alert-danger">
+												<p>Error:</p>
+												<span></span>
+											</div>
+												
+											
+											  
+											<div class="form-group">
+												<label for="email" class="col-md-3 control-label">Email</label>
+												<div class="col-md-9">
+													<input type="text" class="form-control" name="email" placeholder="Email Address">
+												</div>
+											</div>
+												
+											<div class="form-group">
+												<label for="firstname" class="col-md-3 control-label">First Name</label>
+												<div class="col-md-9">
+													<input type="text" class="form-control" name="firstname" placeholder="First Name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="lastname" class="col-md-3 control-label">Last Name</label>
+												<div class="col-md-9">
+													<input type="text" class="form-control" name="lastname" placeholder="Last Name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="password" class="col-md-3 control-label">Password</label>
+												<div class="col-md-9">
+													<input type="password" class="form-control" name="passwd" placeholder="Password">
+												</div>
+											</div>
+												
+											<div class="form-group">
+												<label for="icode" class="col-md-3 control-label">Invitation Code</label>
+												<div class="col-md-9">
+													<input type="text" class="form-control" name="icode" placeholder="">
+												</div>
+											</div>
+
+											<div class="form-group">
+												<!-- Button -->                                        
+												<div class="col-md-offset-3 col-md-9">
+													<button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+													<span style="margin-left:8px;">or</span>  
+												</div>
+											</div>
+											
+											<div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+												
+												<div class="col-md-offset-3 col-md-9">
+													<button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+												</div>                                           
+													
+											</div>
+										</form>
+									 </div>
+								</div>		
+					 </div> 
+				</div>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<header>
+						<h2>Contact Us.</h2>
+						<p>Message me for any questions!</p>
+					</header>
+					<div>
+						<div class="row">
+							<div class="12u">
+								<form method="post" action="#">
+									<div>
+										<div class="row">
+											<div class="6u">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="6u">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<input type="text" name="subject" id="subject" placeholder="Subject" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<textarea name="message" id="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row 200%">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" value="Send Message" /></li>
+													<li><input type="reset" value="Clear Form" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+	</body>
+</html>
