@@ -119,7 +119,7 @@
 	$('btn-status').click(function(e){
 		var list = document.getElementById("contactList");
     var row_index = $(this).parent().index('tr');
-    alert(row_index);
+    alert(row_index.val());
     var number = list.rows[row_index][3];
     var msg = list.rows[row_index][4];
     var interval = list.rows[row_index][5];
