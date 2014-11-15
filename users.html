@@ -99,7 +99,7 @@
             phone.innerHTML = object.get('phone');
 			message.innerHTML = object.get('message');
       interval.innerHTML = object.get('interval');
-            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick=listen(this.id, count) >Not Active<\/button><\/td>';
+            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" onClick=listen('+object.get('phone')+', '+object.get('message')+', '+object.get('interval')+') >Not Active<\/button><\/td>';
             edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+' href="updateContact.html">Edit<\/a><\/td>';
          /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
@@ -121,14 +121,11 @@
 		</table>
 	</div>
   <script>
-	function listen(id, row){
+	function listen(phone, message, interval){
     alert("hello!!!");
     alert("this is id"+id);
 		var list = document.getElementById("contactList");
     alert("we're here!!");
-    var number = row[3];
-    var msg = row[4];
-    var interval = row[5];
     alert("this is number "+number);
 
     $.ajax({
