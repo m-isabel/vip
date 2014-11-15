@@ -58,6 +58,7 @@ function loginManager(func, callback){
 function logout(){
   Parse.User.logOut();
   var currentUser = Parse.User.current();
+  window.location.href="http://m-isabel.github.io/vip/login.html";
 }
 
 /*
