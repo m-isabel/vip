@@ -45,51 +45,39 @@
 	</nav>
 	<body>
 	<div class="container">
-	<div class="row">
-		<div class="12u">
-			<form method="post" action="#">
-				<div>
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="name" id="r-username" placeholder="Username" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="password" id="r-password" placeholder="Password" />
-						</div>
-					</div>										
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="firstName" id="r-fname" placeholder="First Name" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="lastName" id="r-lname" placeholder="Last Name" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="email" id="r-email" placeholder="Email" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="12u">
-							<input type="text" name="phone" id="r-phone" placeholder="Phone" />
-						</div>
-					</div>
-					<div class="row 200%">
-						<div class="12u">
-							<ul class="actions">
-								<li><input type="submit" value="Submit" /></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</form>
+		<label>
+		First Name:
+		</label>
+		<input id="r-fname" type="text" class="form-control" name="fname" value="" placeholder="First Name">
+		<br>
+		<label>
+		Last Name:
+		</label>
+		<input id="r-lname" type="text" class="form-control" name="lname" value="" placeholder="Last Name">
+		<br>
+		<label>
+		Username:
+		</label>
+		<input id="r-username" type="text" class="form-control" name="username" value="" placeholder="Username">
+		<br>
+		<label>
+		Password:
+		</label>
+		<input id="r-password" type="password" class="form-control" name="password" value="" placeholder="Password">
+		<br>
+		<label>
+		Email:
+		</label>
+		<input id="r-email" type="text" class="form-control" name="phone" value="" placeholder="Email">
+		<br>
+		<label>
+		Phone:
+		</label>
+		<input id="r-phone" type="text" class="form-control" name="phone" value="" placeholder="Phone">
+		<br>
+		<div class="form-actions">
+			<button class="btn btn-lg btn-primary btn-block" id="btn-submit">Submit</button>
 		</div>
-	</div>
 	</div>
 	</body>
 </html>
