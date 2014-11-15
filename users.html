@@ -61,7 +61,7 @@
 
 		<br>
 		<br>
-		<table class ="table" id="contactList">
+		<table class="table" id="contactList">
 		<tr>
 			<td><b>First Name</b></td>
 			<td><b>Last Name</b></td>
@@ -99,7 +99,7 @@
             phone.innerHTML = object.get('phone');
 			message.innerHTML = object.get('message');
       interval.innerHTML = object.get('interval');
-            status.innerHTML = '<button class="btn btn-default" id="btn-status"'+object.get('status')+'" >Not Active<\/button><\/td>';
+            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" >Not Active<\/button><\/td>';
             edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+' href="updateContact.html">Edit<\/a><\/td>';
          /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
@@ -116,13 +116,13 @@
         } 
       });
 	  
-	$('btn-status').click(function(e){
+	$('#btn-status1').click(function(e){
 		var list = document.getElementById("contactList");
     var row_index = $(this).parent().index('tr');
     alert(row_index.val());
-    var number = list.rows[row_index][3];
-    var msg = list.rows[row_index][4];
-    var interval = list.rows[row_index][5];
+    var number = list.rows[0][3];
+    var msg = list.rows[0][4];
+    var interval = list.rows[0][5];
 
     $.ajax({
        url: "http://104.236.58.130:3000/info",
