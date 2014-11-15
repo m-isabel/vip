@@ -86,7 +86,7 @@
           var table = document.getElementById("contactList");
           var count = 0;
           for(var key in results){
-            count = count + 1;
+            count++;
             var row = table.insertrow(count);
             var firstname = row.insertcell(0);
             var lastname = row.insertcell(1);
