@@ -84,8 +84,10 @@
       query.find({
         success: function(results){
           var table = document.getElementById("contactList");
+          var count = 0;
           for(var key in results){
-            var row = table.insertrow(key+1);
+            count = count + 1;
+            var row = table.insertrow(count);
             var firstname = row.insertcell(0);
             var lastname = row.insertcell(1);
             var email = row.insertcell(2);
