@@ -1,9 +1,8 @@
 var express=require('express');
 var bodyparser = require('body-parser');
-var parse = require(
-var app = express();
+app = express();
 app.use(bodyparser.json());
-app.use(bodyparser.usrlencoded({ extended:false}));
+app.use(bodyparser.urlencoded({ extended:false}));
 
 app.all('*', function(req, res, next){
   res.header("Access-Control-Allow-Origin", "*");
@@ -20,4 +19,11 @@ app.post('/info', function(req, res, next){
    //if no response call 911
    //
 
+});
+
+var server = app.listen(3000, function(){
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log('started app here');
 });
