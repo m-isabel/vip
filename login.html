@@ -204,7 +204,6 @@
             <script>
 $(window).load(function(){
   Parse.initialize("5SFNa4ThUkd7zwGPmWkQJ0DuIXBcp21WB1dx0t2y", "mbeRBFCBEUEPcBBDps11AZuj1P81K0naKRewz7SQ");
-  alert("got parse");
 });
 $('#loginform').click(function(e){
   var user = $('#login-username').val();
@@ -219,7 +218,8 @@ $('#btn-signup').click(function(e){
   var lastname = $('#r-lname').val();
   var phone = $('#r-phone').val();
   create(user, password, email, firstname, lastname, phone);
-  window.location.replace("http://m-isabel.github.io/vip/index.html");
+  var href = "http://m-isabel.github.io/vip/index.html";
+  $(location).attr('href', href);
 
 });
 
