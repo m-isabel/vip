@@ -210,7 +210,7 @@ $('#loginform').click(function(e){
   var password = $('#login-password').val();
   login(user, pass);
 });
-$('#btn-signup').click(function(e){
+$('#signup_stuff').click(function(e){
   var user = $('#r-username').val();
   var password = $('#r-password').val();
   var email = $('#r-email').val();
@@ -218,8 +218,6 @@ $('#btn-signup').click(function(e){
   var lastname = $('#r-lname').val();
   var phone = $('#r-phone').val();
   create(user, password, email, firstname, lastname, phone);
-  var href = "http://m-isabel.github.io/vip/index.html";
-  $(location).attr('href', href);
 
 });
 
