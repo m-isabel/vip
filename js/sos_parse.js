@@ -10,7 +10,7 @@ function create(username, password, email, firstname, lastname, phone){
     success: function(user){
       $('#btn-signup').submit();
       var url = "http://m-isabel.github.io/vip/users.html";
-      $(location).attr('href', url);
+      window.location.href=url;
     }, error: function(user, error){
       alert("Error: " + error.code + " " + error.message);
     }
