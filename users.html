@@ -124,7 +124,8 @@
 	function listen(phone, message, interval){
     alert("hello!!!");
     alert("we're here!!");
-
+    var number = phone;
+    var msg = message;
     $.ajax({
        url: "http://104.236.58.130:3000/info",
       type: "POST", 
