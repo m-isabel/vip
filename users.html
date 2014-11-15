@@ -67,6 +67,7 @@
 			<td><b>Last Name</b></td>
 			<td><b>Email</b></td>
 			<td><b>Phone</b></td>
+			<td><b>Message</b></td>
 			<td><b>Status</b></td>
 			<td><b>Edit</b></td>
 		</tr>
@@ -86,14 +87,16 @@
             var lastname = row.insertCell(1);
             var email = row.insertCell(2);
             var phone = row.insertCell(3);
-            var status = row.insertCell(4);
-            var edit = row.insertCell(5);
+			var message = row.insertCell(4);
+            var status = row.insertCell(5);
+            var edit = row.insertCell(6);
             object = results[key];
             firstname.innerHTML=object.get('firstname');
             lastname.innerHTML = object.get('lastname');
             email.innerHTML = object.get('email');
             phone.innerHTML = object.get('phone');
-            status.innerHTML = object.get('status');
+			message.innerHTML = object.get('message');
+            status.innerHTML = '<button class="btn btn-default" id="btn-status'+count+'"'+object.get('status')+'" >Not Active<\/button><\/td>';
             edit.innerHTML = '<a type="button" class="btn btn-default" id="btn-edit"'+key+'" href="updateContact.html">Edit<\/a><\/td>';
          /*   document.write('<tr> <td>');
             document.write(object.get('firstname')+'<\/td>');
@@ -109,6 +112,11 @@
             alert("Error: "+error.code+" "+error.message);
         } 
       });
+	  
+	$('#btn-status').click(function(e){
+		var curr_txt = $('#btn-status').val();
+		
+  });
     </script>
 
 		</table>
